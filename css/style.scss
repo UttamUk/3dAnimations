@@ -54,53 +54,6 @@ body{
 }
 
 
-
-@keyframes bg {
-    0% {
-      background-color: #d3f2f7;
-      color: #d3f2f7;
-    }
-    10% {
-      background-color: #d3f7e0;
-      color: #d3f7e0;
-    }
-    20% {
-      background-color: #e4f7d3;
-      color: #e4f7d3;
-    }
-    30% {
-      background-color: #f7f1d3;
-      color: #f7f1d3;
-    }
-    40% {
-      background-color: #f7e9d3;
-      color: #f7e9d3;
-    }
-    50% {
-      background-color: #f7d3d3;
-      color: #f7d3d3;
-    }
-    60% {
-      background-color: #f7d3e0;
-      color: #f7d3e0;
-    }
-    70% {
-      background-color: #eed3f7;
-      color: #eed3f7;
-    }
-    80% {
-      background-color: #d9d3f7;
-      color: #d9d3f7;
-    }
-    90% {
-      background-color: #d3d9f7;
-    }
-    100% {
-      background-color: #d3e5f7;
-      color: #d3e5f7;
-    }
-  }
-
 .prof-sec{
     height: 100vh;
     padding: 3%;
@@ -143,9 +96,15 @@ body{
         .main-imp{
             position: relative;
             width: 120px;
-            height: 150px;
+            height: 120px;
             border: 5px groove #b9b9b9;
             border-radius: 10px;
+            cursor: pointer;
+            transition: all 400ms ease;
+            &:hover{
+                transform: scale(1.4);
+                border-radius: 0px;
+            }
             img{
                 max-width: 100%;
                 height: 100%;
