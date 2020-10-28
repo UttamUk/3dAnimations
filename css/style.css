@@ -16,6 +16,12 @@ body {
   background-color: #d3d9f7;
 }
 
+@media (max-width: 575.98px) {
+  .section-neumo {
+    height: 50vh !important;
+  }
+}
+
 .section-neumo .neumo {
   margin: 0;
   font-weight: bold;
@@ -27,6 +33,13 @@ body {
   outline: none;
   -webkit-animation: text 4s linear infinite alternate;
           animation: text 4s linear infinite alternate;
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  .section-neumo .neumo {
+    font-size: 70px;
+  }
 }
 
 @-webkit-keyframes text {
@@ -65,6 +78,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 575.98px) {
+  .prof-sec {
+    height: 50vh;
+  }
 }
 
 .prof-sec::before {
@@ -96,6 +124,13 @@ body {
   position: relative;
 }
 
+@media (max-width: 575.98px) {
+  .prof-sec .circle {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 .prof-sec .circle::before {
   content: "";
   position: absolute;
@@ -103,6 +138,8 @@ body {
   height: 85%;
   border: 2px dashed #c9c9c9;
   border-radius: 50%;
+  -webkit-animation: circle 40s linear infinite;
+          animation: circle 40s linear infinite;
 }
 
 .prof-sec .circle .main-imp {
@@ -149,6 +186,13 @@ body {
           animation: move 10s linear infinite;
 }
 
+@media (max-width: 575.98px) {
+  .prof-sec .circle .circle-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .prof-sec .circle .circle-img:nth-child(1) {
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
@@ -174,6 +218,28 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes bgi {
@@ -225,6 +291,29 @@ body {
   100% {
     -webkit-transform: rotate(360deg) translate(200px) rotate(-360deg);
             transform: rotate(360deg) translate(200px) rotate(-360deg);
+  }
+}
+
+@media (max-width: 575.98px) {
+  @-webkit-keyframes move {
+    0% {
+      -webkit-transform: rotate(0deg) translate(120px) rotate(0deg);
+              transform: rotate(0deg) translate(120px) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg) translate(120px) rotate(-360deg);
+              transform: rotate(360deg) translate(120px) rotate(-360deg);
+    }
+  }
+  @keyframes move {
+    0% {
+      -webkit-transform: rotate(0deg) translate(120px) rotate(0deg);
+              transform: rotate(0deg) translate(120px) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg) translate(120px) rotate(-360deg);
+              transform: rotate(360deg) translate(120px) rotate(-360deg);
+    }
   }
 }
 

@@ -19,7 +19,9 @@ body{
 
 .section-neumo{
     background-color: #d3d9f7;
-    // animation: bg 6s linear infinite alternate;
+    @include xsm{
+        height: 50vh !important;
+    }
     .neumo{
         margin: 0;
         font-weight: bold;
@@ -32,6 +34,10 @@ body{
         8px 8px 12px rgba(0,0,0,0.08);
         outline: none;
         animation: text 4s linear infinite alternate;
+        text-align: center;
+        @include xsm{
+            font-size: 70px;
+        }
     }
 }
 
@@ -64,6 +70,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include xsm{
+        height: 50vh;
+    }
     &::before{
         content: "";
         position: absolute;
@@ -85,6 +97,10 @@ body{
         justify-content: center;
         margin: 0 auto;
         position: relative;
+        @include xsm{
+            width: 300px;
+            height: 300px;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -92,6 +108,7 @@ body{
             height: 85%;
             border: 2px dashed #c9c9c9;
             border-radius: 50%;
+            animation: circle 40s linear infinite;
         }
         .main-imp{
             position: relative;
@@ -124,6 +141,10 @@ body{
             justify-content: center;
             overflow: hidden;
             animation: move 10s linear infinite;
+            @include xsm{
+                width: 80px;
+                height: 80px;
+            }
             @for $i from 1 to 5 {
                 &:nth-child(#{$i}){
                     animation-delay: #{2.5*$i}s;
@@ -137,6 +158,15 @@ body{
         }
     }
 
+}
+
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -161,6 +191,17 @@ body{
     }
     100%{
         transform: rotate(360deg) translate(200px) rotate(-360deg);
+    }
+}
+
+@include xsm{
+    @keyframes move{
+        0%{
+            transform: rotate(0deg) translate(120px) rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg) translate(120px) rotate(-360deg);
+        }
     }
 }
 
