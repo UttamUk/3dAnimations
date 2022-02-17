@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3D Animations</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .flex {
+        display: flex;
+      }
+      .dot {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-image: linear-gradient(
+          to right,
+          #eeeeee 0%,
+          #eeeeee 40%,
+          #dddddd 50%,
+          #dddddd 55%,
+          #eeeeee 60%,
+          #eeeeee 100%
+        );
+        box-shadow: 4px 4px 15px rgba(43, 42, 42, 0.1);
+        background-size: 400%;
+        animation: anim 1s linear infinite both;
+      }
+      .demo {
+        width: 200px;
+        height: 120px;
+        background-image: linear-gradient(
+          to right,
+          #eeeeee 0%,
+          #eeeeee 40%,
+          #dddddd 50%,
+          #dddddd 55%,
+          #eeeeee 60%,
+          #eeeeee 100%
+        );
+        box-shadow: 4px 4px 15px rgba(43, 42, 42, 0.1);
+        background-size: 400%;
+        animation: anim 1s linear infinite both;
+        border-radius: 4px;
+      }
+      @keyframes anim {
+        0% {
+          background-position: 100% 100%;
+        }
+        100% {
+          background-position: 0% 0%;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -72,6 +120,11 @@
       </div>
     </section>
 
+    <div class="flex">
+      <div class="dot"></div>
+      <div class="demo"></div>
+    </div>
+  </body>
     <script src="js/script.js"></script>
   </body>
 </html>
